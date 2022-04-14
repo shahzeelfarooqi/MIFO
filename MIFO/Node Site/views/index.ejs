@@ -1,0 +1,83 @@
+<head>
+    <meta charset= "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width = device-width, initial scale = 1">
+          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel = "stylesheet" href = "styles.css" type="text/css">
+    
+    
+    
+    <title>Login - MiFO </title>
+    
+    
+    
+</head>
+    
+<body style="margin: 0px; padding-top: 0px;">
+    
+    
+
+
+    
+
+    <div class="entire-page">
+        
+        <div class="titleMessage">
+            <p class="myName">Welcome to MiFO</p>
+               
+        </div>
+        
+        <div class="login-box">
+            
+            <p class="sub-typed">MiFO Portal</p>
+            
+            <div class="login-options">
+                <div id="login-buttons"></div>
+                    <button id= "loginButton" type="button" class="toggle-btn" onclick="loginButtonPressed()">Log In</button>
+                    <button id = "registerButton" type="button" class="toggle-btn" onclick="registerButtonPressed()">Register</button>
+            </div>
+            
+            
+            
+            <form action = "http://localhost:3000/login" method="post" id="loginForm" class = "login-input">
+                <input id = "loginEmailField" name="loginEmailField" type = "text" class="input-field" placeholder="E-mail" required>
+                <input id = "loginPasswordField" name="loginPasswordField" type = "text" class="input-field" placeholder="Enter Password" required>
+                <input id = "loginCheckbox" type="checkbox" class = "check-box">
+                    <span>Remember Password</span>
+                <button id = "loginSubmitButton" type="submit" class="submit-button">Log In</button>
+                <div id = "loginErrorMessages" class = formErrorMessages></div>
+            </form>
+            
+            
+            
+            <form action = "http://localhost:3000/register" method="POST" id = "registrationForm" class = "registration-input">
+                <input id = "registrationEmailField" name= "registrationEmailField" type = "e-mail" class="input-field" placeholder="Enter E-Mail" required>
+                <input id = "registrationNameField" name="registrationNameField" type = "text" class="input-field" placeholder="Enter Full Name" required>
+                <input id = "registrationDepartmentField" name="registrationDepartmentField" type = "text" class="input-field" placeholder="Enter Department Name" required>
+                <input id = "registrationPasswordField" name="registrationPasswordField" type = "text" class="input-field" placeholder="Create Password" required>
+                <input id = "registrationCheckbox" type="checkbox" class = "check-box" required>
+                    <span>I agree to MiFO's Terms and Conditions</span>
+                <button type="submit" class="submit-button">Create Account</button>
+                <div id = "registrationErrorMessages" class = formErrorMessages></div>
+            </form>
+            
+                
+            
+        </div>
+        
+            
+    </div>
+    
+    <div class="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner"></span>
+        </span>
+    </div>
+
+
+</body>
+        
+        <script src="./loginScript.js"></script>
+
