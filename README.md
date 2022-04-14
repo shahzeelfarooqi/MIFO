@@ -2,6 +2,6 @@
 
 The Python task was completed
 
-For a website, I created a simple login page, complete with html, javascript, and css as a node/express project
+For a website, I created a simple login page as a node/express project complete with views, static content, and REST requests to endpoints  
 
 Additionally, I created a simple login page using react as well
